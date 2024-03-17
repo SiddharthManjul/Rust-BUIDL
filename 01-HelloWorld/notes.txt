@@ -1,0 +1,4 @@
+Code Execution in rust starts from main() function.
+
+println!() and print!() are used to print the items in terminal when code is executed.
+println!() adds the new line in the output while print!() don't.
