@@ -10,6 +10,7 @@ fn main() {
 }
 
 /* 
+Int is scalar type.
 Both signed and unsigned integers are available in rust. For signed we use i whereas for unsigned we use u.
 Signed Integers: i8, i16, i32 and i64.
 Unsigned Integers: u8, u16, u32, u64.

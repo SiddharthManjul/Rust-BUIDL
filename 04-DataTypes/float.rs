@@ -7,6 +7,7 @@ fn main() {
 }
 
 /* 
+Float is scalar type.
 Rust has two primitive types for floating-point numbers, which are numbers with decimal points.
 f32 for 32-bit and f64 for 64-bit.
 Rust uses f64 as default.
