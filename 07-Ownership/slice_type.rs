@@ -4,10 +4,13 @@ fn main() {
     let word = first_word(&s);
     println!("{}", word);
 
+    let len = word.len();
+    println!("{}", len);
+
     s.clear();
 }
 
-fn first_word(s : &String) -> &str {
+fn first_word(s : &str) -> &str {
     let bytes = s.as_bytes();
 
     for (i, &item) in bytes.iter().enumerate() {
