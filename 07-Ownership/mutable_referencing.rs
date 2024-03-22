@@ -20,4 +20,6 @@ Mutable references have one big restriction: if you have a mutable reference to 
 
 The restriction preventing multiple mutable references to the same data at the same time allows for mutation but in a very controlled fashion
 thus preventing the problem called Data Races.
+
+We also cannot have mutable reference while we have immutable ones for the same value.
 */
