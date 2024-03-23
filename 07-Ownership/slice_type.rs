@@ -1,3 +1,5 @@
+// Slicing wtih Slice Type.
+
 fn main() {
     let mut s = String::from("Hello World");
 
