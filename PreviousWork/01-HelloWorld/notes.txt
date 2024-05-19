@@ -1,0 +1,12 @@
+Code Execution in rust starts from main() function.
+
+println!() and print!() are rust macros, which is how meta programming is done in rust.
+Whenever calling a function with !, it means you're calling a macro instead of a normalfunction.
+
+Macro: In Rust, a macro is a piece of code that generates another piece of code. 
+    Macros are used for metaprogramming, allowing you to write code that writes more code. 
+    They can simplify repetitive patterns, make code more concise, and enable you to create your own syntax or sub-language within Rust.
+
+println!() and print!() are used to print the items in terminal when code is executed.
+println!() adds the new line in the output while print!() don't.
+The curly brackets tell println! to use formatting known as Display: output intended for direct end user consumption.

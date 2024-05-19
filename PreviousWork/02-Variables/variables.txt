@@ -1,0 +1,10 @@
+Variables:
+1. Assigned using "let" keyword.
+2. Print to standard output by print!() or println!().
+3. Scope of a variable defined by the block of code in which it's declared.
+4. Function is a named block of code that is reusable.
+5. Shadowing allows a variable to be re-declared in the same scope with the same name.
+6. A variable can be used only if it's initialized.
+7. "mut" is used to mark a variable as mutable: In rust, a variable by nature is immutable so you have to explicitly declare it as mutable using "mut" keyword.
+
+
