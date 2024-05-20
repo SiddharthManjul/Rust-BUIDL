@@ -6,10 +6,13 @@ pub fn subtract(num: u32) -> u32 {
     num - 5
 }
 
-// To run a test we have to use "cargo test" command.
-// To let the tests print out the values, use "cargo test -- --nocapture" command.
-// To run a single test put the test function name after cargo test: "cargo test adds_a_number_test"
-// In case a test fails, use "RUST_BACKTRACE=1 cargo test test_name" to check the issues.
+pub fn multiply(num: u32) -> u32 {
+    num * 5
+}
+
+pub fn divide(num: u32) -> u32 {
+    num / 5
+}
 
 #[cfg(test)]
 mod test {
@@ -30,6 +33,20 @@ mod test {
         println!("x and y are from test: {} {}", x, y);
         assert_eq!(y, 95);
     }
-}
 
-// pub keyword is used to make a function public.
+    #[test]
+    fn multiplies_a_number_test() {
+        let x = 4;
+        let y = multiply(x);
+        println!("x and y are from test: {} {}", x, y);
+        assert_eq!(y, 20);
+    }
+
+    #[test]
+    fn divides_a_number_test() {
+        let x = 50;
+        let y = divide(x);
+        println!("x and y are from test: {} {}", x, y);
+        assert_eq!(y, 10);
+    }
+}

@@ -2,7 +2,7 @@ mod funcs;
 mod functions; // Letting the file know that there is a file called funcs.rs existing.
 
 use crate::funcs::{add, subtract};
-use crate::functions::other_funcs::divide;// Importing add & subtract functions from funcs. We can also use * for the same.
+use crate::functions::other_funcs::divide; // Importing add & subtract functions from funcs. We can also use * for the same.
 fn main() {
     let mut x: u32 = 50;
     println!("x is {}", x);
