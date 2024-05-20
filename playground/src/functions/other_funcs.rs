@@ -1,6 +1,26 @@
+/// # Function: multiply 
+/// 
+/// # Argument: (num: u32)
+/// 
+/// # Example:
+/// ```
+/// let x = 5;
+/// let p = add(x);
+/// ```
+
 pub fn multiply(num: u32) -> u32 {
     num * 5
 }
+
+/// # Function: divide 
+/// 
+/// # Argument: (num: u32)
+/// 
+/// # Example:
+/// ```
+/// let x = 5;
+/// let q = add(x);
+/// ```
 
 pub fn divide(num: u32) -> u32 {
     num / 5

@@ -1,4 +1,4 @@
-/// Functions: add and subtract
+/// # Function: add 
 /// 
 /// # Argument: (num: u32)
 /// 
@@ -12,7 +12,13 @@ pub fn add(num: u32) -> u32 {
     num + 5
 }
 
+/// # Function: add 
+/// 
+/// # Argument: (num: u32)
+/// 
+/// # Example:
 /// ```
+/// let x = 5;
 /// let z = subtract(x);
 /// ```
 
