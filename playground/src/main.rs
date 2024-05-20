@@ -1,16 +1,18 @@
-fn add_five(num: u32) -> u32 {
-    num + 5
-}
+mod funcs; // Letting the file know that there is a file called funcs.rs existing.
 
+use crate::funcs::{add, subtract}; // Importing add_five function from funcs.
 fn main() {
     let mut x: u32 = 50;
     println!("x is {}", x);
 
-    let y = add_five(x);
+    let y = add(x);
     println!("y is {}", y);
 
     x = 60;
     println!("x is {}", x);
+
+    let z = subtract(x);
+    println!("z is {}", z);
 }
 
 // Everything in Rust is immutable by default.
