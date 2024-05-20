@@ -1,6 +1,8 @@
-mod funcs; // Letting the file know that there is a file called funcs.rs existing.
+mod funcs;
+mod functions; // Letting the file know that there is a file called funcs.rs existing.
 
-use crate::funcs::{add, subtract}; // Importing add_five function from funcs.
+use crate::funcs::{add, subtract};
+use crate::functions::other_funcs::divide;// Importing add & subtract functions from funcs. We can also use * for the same.
 fn main() {
     let mut x: u32 = 50;
     println!("x is {}", x);
@@ -13,6 +15,9 @@ fn main() {
 
     let z = subtract(x);
     println!("z is {}", z);
+
+    let p = divide(x);
+    println!("p is {}", p);
 }
 
 // Everything in Rust is immutable by default.
