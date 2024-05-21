@@ -28,4 +28,22 @@ fn main() {
     println!("Removed character is {}", removed_char);
 
     println!("Now the array is {:?}", chars);
+
+    // Creating a collection of letters
+    chars.iter().for_each(|c| print!("{}", c));
+    print!("\n");
+
+    // Another way
+    let new_chars: Vec<char> = vec!['h','e','l','l','o'];
+    dbg!(&new_chars);
+
+    let collected: String = new_chars.iter().collect();
+    println!("Collected String is {}", collected);
+
+    for c in new_chars {
+        print!("{}", c);
+        if c == 'o' {
+            println!(", world!");
+        }
+    }
 }

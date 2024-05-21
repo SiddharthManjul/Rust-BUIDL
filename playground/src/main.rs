@@ -16,6 +16,7 @@ fn main() {
 
     // Another example
     let mut x: i32 = 50;
+    dbg!(x);
     x = 70;
     dbg!(x); // dbg!() is another way to print out the values and it will also tell the file and line number in the terminal.
 
