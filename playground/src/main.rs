@@ -1,30 +1,20 @@
-const MY_INTEGER: u8 = 10; // Constants in Rust should be declared using uppercase with underscore.
-
+// Static
+const MSG_CONST: &str = "hello_constant";
 
 fn main() {
 
-    // Stack
-    let x: u8 = 50;
-    println!("x is {}", x);
+    // Heap
+    let s: String = String::from("Hello String");
+    let s2 = &s[0..5];
+    println!("{}", s2);
+
+    //Static: This is a String Literal and it's stored statically and msg is pointing to the literal thus msg is in stack and the data is Static.
+    let msg: &str = "Hello2";
+    println!("{}", msg);
 
     // Heap
-    let mut arr: Vec<u8> = vec![1, 2, 3, 4, 5];
-    arr.push(10);
-    println!("arr is {:?}", arr);
+    let msg_string: String = "Hello3".to_string();
+    println!("{}", msg_string);
 
-    // A reference on the Stack pointing to a value on the Heap.
-    let arr_2 = &arr[0..3];
-    println!("arr_2 is {:?}", arr_2);
-
-    // Heap
-    let mut s: String = String::from("Siddharth Manjul");
-    s.push(' ');
-    s.push('!');
-    println!("s is {}", s);
-
-    // A reference on the Stack pointing to a value on the Heap.
-    let s_2 = &s[0..9];
-    println!("s_2 is {}", s_2);
-
-    println!("MY_INTEGER is {}", MY_INTEGER);
+    println!("{}", MSG_CONST);
 }

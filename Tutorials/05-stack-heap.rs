@@ -1,5 +1,6 @@
 const MY_INTEGER: u8 = 10; // Constants in Rust should be declared using uppercase with underscore.
 
+
 fn main() {
 
     // Stack
