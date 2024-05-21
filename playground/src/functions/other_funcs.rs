@@ -7,6 +7,7 @@
 /// let x = 5;
 /// let p = add(x);
 /// ```
+#[allow(dead_code, unused_variables)]
 
 pub fn multiply(num: u32) -> u32 {
     num * 5

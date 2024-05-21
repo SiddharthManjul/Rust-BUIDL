@@ -1,25 +1,30 @@
-mod funcs;
-mod functions;
-/// Letting the file know that there is a file called funcs.rs existing.
-use crate::funcs::{add, subtract};
-use crate::functions::other_funcs::divide;
-/// Importing add & subtract functions from funcs. We can also use * for the same.
-///  Everything in Rust is immutable by default.
+const MY_INTEGER: u8 = 10; // Constants in Rust should be declared using uppercase with underscore.
+
 
 fn main() {
-    //To make a variable mutable we need to use mut keyword like this: let mut x: u32 = 50;
-    let mut x: u32 = 50;
+
+    // Stack
+    let x: u8 = 50;
     println!("x is {}", x);
 
-    let y = add(x);
-    println!("y is {}", y);
+    // Heap
+    let mut arr: Vec<u8> = vec![1, 2, 3, 4, 5];
+    arr.push(10);
+    println!("arr is {:?}", arr);
 
-    x = 60;
-    println!("x is {}", x);
+    // A reference on the Stack pointing to a value on the Heap.
+    let arr_2 = &arr[0..3];
+    println!("arr_2 is {:?}", arr_2);
 
-    let z = subtract(x);
-    println!("z is {}", z);
+    // Heap
+    let mut s: String = String::from("Siddharth Manjul");
+    s.push(' ');
+    s.push('!');
+    println!("s is {}", s);
 
-    let p = divide(x);
-    println!("p is {}", p);
+    // A reference on the Stack pointing to a value on the Heap.
+    let s_2 = &s[0..9];
+    println!("s_2 is {}", s_2);
+
+    println!("MY_INTEGER is {}", MY_INTEGER);
 }
