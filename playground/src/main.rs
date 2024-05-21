@@ -1,20 +1,33 @@
-// Static
-const MSG_CONST: &str = "hello_constant";
+fn make_string_not_dangle() -> String {
+    let s: String = String::from("not dangle");
+    s
+    // String::from("not dangle"); will be returned as this syntax too because when we return a value in rust, we can do so without adding colon.
+}
 
 fn main() {
 
-    // Heap
-    let s: String = String::from("Hello String");
-    let s2 = &s[0..5];
-    println!("{}", s2);
+    // Works
+    let x: i32 = 50;
+    let y = x;
+    println!("{}", x);
+    println!("{}", y);
 
-    //Static: This is a String Literal and it's stored statically and msg is pointing to the literal thus msg is in stack and the data is Static.
-    let msg: &str = "Hello2";
-    println!("{}", msg);
+    // Will not work because the value of s has been moved to t.
+    // let s: String = String::from("Hello");
+    // let t: String = s;
+    // println!("{}", s);
 
-    // Heap
-    let msg_string: String = "Hello3".to_string();
-    println!("{}", msg_string);
+    // Works, not recommended though
+    let s: String = String::from("Hello");
+    let t: String = s.clone();
+    println!("{}", t);
 
-    println!("{}", MSG_CONST);
+    // Works and recommended.
+    let s: String = String::from("Hello2");
+    let t: &String = &s;
+    println!("{}", t);
+
+    // Works
+    let r = make_string_not_dangle();
+    println!("{}", r);
 }
