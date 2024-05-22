@@ -1,19 +1,23 @@
 fn main() {
     
-    // Closures
-    let num: i32 = 5;
-    let add_num = |x: i32| x + num;
-    let new_num = add_num(7);
-    dbg!(new_num);
+    // Binary
+    let a: u8 = 0b_1010_1010;
+    let b: u8 = 0b_0101_1010;
+    println!("a's value is {}", a);
+    println!("b's value is {}", b);
 
-    // Number Literals
-    println!("Big number is {}", 98_222_000);
-    println!("Hex is {}", 0xff);
-    println!("Octal is {}", 0o77);
-    println!("Binary is {}", 0b1111_0000);
-    println!("Bytes 'A' is {}", b'A');
+    println!("a's binary is {:08b}", a);
+    println!("b's binary is {:08b}", b);
 
-    // Raw - String Literal
-    let text: &str = r#"{"Message" : "Rust is Awesome"}"#;
-    dbg!(text);
+    // Logic Gates
+    println!("AND {:08b}", a & b);
+    println!("OR {:08b}", a | b);
+    println!("XOR {:08b}", a ^ b);
+    println!("NOT A {:08b}", !a);
+
+    // Bitwise Operations
+    println!("a << 1 {:08b}", a << 1);
+    println!("a << 1 {}", a << 1);
+    println!("a >> 1 {:08b}", a >> 1);
+    println!("a >> 1 {}", a >> 1);
 }
