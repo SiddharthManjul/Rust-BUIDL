@@ -1,4 +1,3 @@
-use core::num;
 #[allow(dead_code)]
 #[derive(Debug)]
 
@@ -9,6 +8,7 @@ enum CarColour {
     Silver
 }
 
+#[allow(dead_code)]
 fn create_car_colour() -> CarColour {
     let car_colour = CarColour::Blue;
     car_colour
@@ -30,6 +30,7 @@ enum GivenOption<T> {
     Some(T)
 }
 
+#[allow(dead_code)]
 fn check_under_five(num_check: u8) -> GivenResult<u8, String> {
     if num_check < 5 {
         GivenResult::Ok(num_check)
@@ -39,6 +40,7 @@ fn check_under_five(num_check: u8) -> GivenResult<u8, String> {
 }
 
 // Using Rust Built-in Module
+#[allow(dead_code)]
 fn check_under_five_builtin(num_check: u8) -> Result<u8, String> {
     if num_check < 5 {
         Ok(num_check)
@@ -47,6 +49,7 @@ fn check_under_five_builtin(num_check: u8) -> Result<u8, String> {
     }
 }
 
+#[allow(dead_code)]
 fn remainder_zero(num_check: f32) -> GivenOption<f32> {
     let remainder = num_check % 10.0;
     if remainder != 0.0 {
@@ -57,6 +60,7 @@ fn remainder_zero(num_check: f32) -> GivenOption<f32> {
 }
 
 // Using Rust Built-in Module with Option
+#[allow(dead_code)]
 fn remainder_zero_builtin(num_check: f32) -> Option<f32> {
     let remainder = num_check % 10.0;
     if remainder != 0.0 {
@@ -78,8 +82,8 @@ mod test {
         let is_number_under_five = check_under_five(2);
         dbg!(is_number_under_five);
 
-        let is_number_under_five_builtin = check_under_five_builtin(7);
-        dbg!(is_number_under_five_builtin);
+        // let is_number_under_five_builtin = check_under_five_builtin(7);
+        // dbg!(is_number_under_five_builtin);
 
         let remainder = remainder_zero(12.2);
         dbg!(remainder);
