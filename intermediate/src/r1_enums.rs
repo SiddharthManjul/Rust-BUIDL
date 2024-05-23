@@ -38,12 +38,31 @@ fn check_under_five(num_check: u8) -> GivenResult<u8, String> {
     }
 }
 
+// Using Rust Built-in Module
+fn check_under_five_builtin(num_check: u8) -> Result<u8, String> {
+    if num_check < 5 {
+        Ok(num_check)
+    } else {
+        Err("Not Under 5!".to_string())
+    }
+}
+
 fn remainder_zero(num_check: f32) -> GivenOption<f32> {
     let remainder = num_check % 10.0;
     if remainder != 0.0 {
         GivenOption::Some(remainder)
     } else {
         GivenOption::None
+    }
+}
+
+// Using Rust Built-in Module with Option
+fn remainder_zero_builtin(num_check: f32) -> Option<f32> {
+    let remainder = num_check % 10.0;
+    if remainder != 0.0 {
+        Some(remainder)
+    } else {
+        None
     }
 }
 
@@ -59,10 +78,13 @@ mod test {
         let is_number_under_five = check_under_five(2);
         dbg!(is_number_under_five);
 
-        let is_number_under_five = check_under_five(7);
-        dbg!(is_number_under_five);
+        let is_number_under_five_builtin = check_under_five_builtin(7);
+        dbg!(is_number_under_five_builtin);
 
         let remainder = remainder_zero(12.2);
+        dbg!(remainder);
+
+        let remainder = remainder_zero_builtin(10.0);
         dbg!(remainder);
     }
 }
