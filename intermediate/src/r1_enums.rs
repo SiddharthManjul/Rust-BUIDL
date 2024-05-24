@@ -5,7 +5,7 @@ enum CarColour {
     Red,
     Green,
     Blue,
-    Silver
+    Silver,
 }
 
 #[allow(dead_code)]
@@ -17,17 +17,17 @@ fn create_car_colour() -> CarColour {
 // <T, E> - Generic Type or Generics
 #[derive(Debug)]
 #[allow(dead_code)]
-enum GivenResult<T, E> { 
+enum GivenResult<T, E> {
     Ok(T),
-    Err(E)
+    Err(E),
 }
 
 // Some or None
 #[derive(Debug)]
 #[allow(dead_code)]
-enum GivenOption<T> { 
+enum GivenOption<T> {
     None,
-    Some(T)
+    Some(T),
 }
 
 #[allow(dead_code)]

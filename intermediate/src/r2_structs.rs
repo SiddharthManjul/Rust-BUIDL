@@ -5,7 +5,7 @@ struct User {
     username: String,
     email: String,
     sign_in_count: u64,
-    is_active: bool
+    is_active: bool,
 }
 
 #[allow(dead_code)]
@@ -30,7 +30,6 @@ mod test {
 
     #[test]
     fn tests_structs() {
-
         let mut user1 = User {
             username: String::from("someuser1"),
             email: String::from("user1@example.com"),
@@ -38,7 +37,7 @@ mod test {
             is_active: true,
         };
 
-        // user1.username = "anotherusername".to_string(); 
+        // user1.username = "anotherusername".to_string();
         change_username(&mut user1, "somenewname");
 
         dbg!(user1);

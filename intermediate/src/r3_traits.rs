@@ -9,16 +9,15 @@ trait Attacker {
 enum Character {
     Warrior,
     Archer,
-    Wizard
+    Wizard,
 }
 
 impl Attacker for Character {
-
     fn choose_weapon(&self) -> String {
         match self {
             Character::Warrior => "Excalibur".to_string(),
             Character::Archer => "Sarang Bow".to_string(),
-            Character::Wizard => "Expecto Patronus".to_string()
+            Character::Wizard => "Expecto Patronus".to_string(),
         }
     }
 
@@ -26,7 +25,7 @@ impl Attacker for Character {
         match self {
             Character::Warrior => "King Arthur".to_string(),
             Character::Archer => "Arjuna".to_string(),
-            Character::Wizard => "Albus Dumbledore".to_string()
+            Character::Wizard => "Albus Dumbledore".to_string(),
         }
     }
 }
