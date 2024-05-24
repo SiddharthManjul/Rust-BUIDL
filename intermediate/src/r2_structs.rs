@@ -8,6 +8,7 @@ struct User {
     is_active: bool
 }
 
+#[allow(dead_code)]
 impl User {
     fn increment_sign_in_count(&mut self) {
         self.sign_in_count += 1;
@@ -18,6 +19,7 @@ impl User {
     }
 }
 
+#[allow(dead_code)]
 fn change_username(user: &mut User, new_username: &str) {
     user.username = String::from(new_username);
 }
