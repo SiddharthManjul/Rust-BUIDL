@@ -35,6 +35,7 @@ struct Person<'p> {
     points: &'p f32,
 }
 
+#[allow(dead_code, unused_variables)]
 pub fn lifetimes_with_struct() {
     let highest_points: &f32;
     let final_points: f32;

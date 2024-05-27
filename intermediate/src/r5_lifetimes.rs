@@ -8,6 +8,7 @@ pub fn example_0() {
     println!("{}", r);
 }
 
+#[allow(dead_code, unused_variables)]
 pub fn example_highest_age() {
     // Allocate space in Memory
     let highest_age: i32;
@@ -30,6 +31,7 @@ pub fn example_highest_age() {
     }
 }
 
+#[allow(dead_code, unused_variables)]
 // Lifetimes Example and fully based on Referencing.
 pub fn lifetime_example_highest_age() {
     // Allocate space in Memory
