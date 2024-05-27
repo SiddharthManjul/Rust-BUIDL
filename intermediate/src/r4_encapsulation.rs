@@ -6,7 +6,6 @@ pub struct AveragedCollection {
 }
 
 impl AveragedCollection {
-
     #[allow(dead_code)]
     pub fn add(&mut self, value: i32) {
         self.list.push(value);
