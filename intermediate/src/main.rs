@@ -4,13 +4,15 @@ mod r2_structs;
 mod r3_traits;
 mod r4_encapsulation;
 mod r5_lifetimes;
+mod r6_lifetimes_with_generics;
 
-use crate::r5_lifetimes::example_0;
-use crate::r5_lifetimes::example_highest_age;
-use crate::r5_lifetimes::lifetime_example_highest_age;
+use crate::r5_lifetimes::{example_0, example_highest_age, lifetime_example_highest_age};
+use crate::r6_lifetimes_with_generics::{lifetime_with_generics, lifetimes_with_struct};
 
 fn main() {
     example_0();
     example_highest_age();
     lifetime_example_highest_age();
+    lifetime_with_generics();
+    lifetimes_with_struct();
 }

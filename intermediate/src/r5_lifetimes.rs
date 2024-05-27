@@ -45,7 +45,7 @@ pub fn lifetime_example_highest_age() {
         highest_age = finding_highest_age(&alice_age, &bob_age);
         final_age = *highest_age;
 
-        // Printings 
+        // Printings
         // Solution 1
         // println!("Highest age is {}.", highest_age);
     }
