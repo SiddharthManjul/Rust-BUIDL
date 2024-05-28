@@ -7,6 +7,7 @@ mod r5_lifetimes;
 mod r6_lifetimes_with_generics;
 mod r7_pattern_matching;
 mod r8_async;
+mod r9_async_error;
 
 // use crate::r5_lifetimes::{example_0, example_highest_age, lifetime_example_highest_age};
 // use crate::r6_lifetimes_with_generics::{lifetime_with_generics, lifetimes_with_struct};
