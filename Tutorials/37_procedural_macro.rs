@@ -4,8 +4,7 @@ mod tests {
 
     use ai_func_proc_macro::function_to_string;
 
-    #[allow(dead_code)]
-    const OUTPUT: &str = "YO ";
+    const OUTPUT: &str = "";
 
     #[function_to_string]
     fn some_function_for_ai_llm(_whatever_param: &str) {
