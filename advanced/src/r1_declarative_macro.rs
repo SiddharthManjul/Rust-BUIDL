@@ -59,7 +59,7 @@ mod tests {
 
     macro_rules! local_vec {
         ($($x: expr), +) => {
-            
+
             {
                 let mut temp_vec = Vec::new();
                 $(

@@ -2,13 +2,12 @@
 
 mod tests {
 
-    use std::rc::{Rc, Weak};
     use std::cell::RefCell;
+    use std::rc::{Rc, Weak};
 
     #[test]
     #[allow(dead_code, unused_variables)]
     fn tests_box_smart_pointers() {
-
         #[derive(Debug)]
 
         struct Node {
@@ -16,13 +15,13 @@ mod tests {
             next: Option<Box<Node>>,
         }
 
-        let nodes: Box<Node> = Box::new(
-            Node { id: 0, next: Some(Box::new(
-                Node { id: 1, next: Some(Box::new(
-                    Node { id: 2, next: None }
-                ))}
-            ))}
-        );
+        let nodes: Box<Node> = Box::new(Node {
+            id: 0,
+            next: Some(Box::new(Node {
+                id: 1,
+                next: Some(Box::new(Node { id: 2, next: None })),
+            })),
+        });
 
         dbg!(nodes);
     }
@@ -30,21 +29,18 @@ mod tests {
     #[test]
     #[allow(dead_code, unused_variables)]
     fn tests_reference_pointers() {
-
-        let x:Rc<RefCell<i32>>  = Rc::new(RefCell::new(50));
-        let y:Rc<RefCell<i32>>  = Rc::clone(&x);
+        let x: Rc<RefCell<i32>> = Rc::new(RefCell::new(50));
+        let y: Rc<RefCell<i32>> = Rc::clone(&x);
 
         *x.borrow_mut() = 72;
 
         dbg!(x.borrow());
         dbg!(y.borrow());
-
     }
 
     #[test]
     #[allow(dead_code, unused_variables)]
     fn tests_reference_pointers_with_weak() {
-
         #[derive(Debug, Clone)]
         struct House {
             address_number: u16,
@@ -62,19 +58,19 @@ mod tests {
         let house_1: Rc<House> = Rc::new(House {
             address_number: 123,
             street: "coding avenue".to_string(),
-            furniture: RefCell::new(vec!())
+            furniture: RefCell::new(vec![]),
         });
 
         let table: Rc<Furniture> = Rc::new(Furniture {
             id: "table1".to_string(),
             description: "kitchen table".to_string(),
-            house: Rc::downgrade(&house_1)
+            house: Rc::downgrade(&house_1),
         });
 
         let desk: Rc<Furniture> = Rc::new(Furniture {
             id: "desk1".to_string(),
             description: "office desk".to_string(),
-            house: Rc::downgrade(&house_1)
+            house: Rc::downgrade(&house_1),
         });
 
         house_1.furniture.borrow_mut().push(Rc::clone(&table));

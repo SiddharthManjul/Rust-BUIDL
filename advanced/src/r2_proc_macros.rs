@@ -17,7 +17,6 @@ mod tests {
 
     #[test]
     fn tests_proc_macro() {
-        
         let x: &str = some_function_for_ai_llm("Some Large Prompt");
         dbg!(x);
     }
